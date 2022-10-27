@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.persistence.domain.Playlist;
-import com.example.persistence.domain.Song;
 import com.example.rest.dto.PlaylistDTO;
 import com.example.rest.dto.SongDTO;
 import com.example.service.PlaylistService;
-import com.example.service.SongService;
 
 public class PlaylistController {
 	@Autowired
@@ -39,12 +37,17 @@ public class PlaylistController {
 	}
 	
 	@GetMapping("/playlistByTitle")
-	public PlaylistDTO readSongByTitle(@PathParam("title") String title) {
+	public PlaylistDTO readPlaylistByTitle(@PathParam("title") String title) {
 		return service.readByPlaylistTitle(title);
 	}
 	
+	@GetMapping("/playlistByTitle")
+	public SongDTO readPlaylistSongsByTitle(@PathParam("title") String title) {
+		return service.readPlaylistSongsByTitle(title);
+	}
+	
 	@PutMapping("/updatePlaylist/{id}")
-	public PlaylistDTO updateSong(@PathVariable String id, @RequestBody Playlist playlist) {
+	public PlaylistDTO updatePlaylist(@PathVariable String id, @RequestBody Playlist playlist) {
 		return service.updatePlaylist(id, playlist);
 	}
 	
