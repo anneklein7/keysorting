@@ -22,7 +22,6 @@ public class Song {
 	private Integer songid;
 	
 	@NotNull
-	@OneToMany
 	private String playlistid;
 	
 	private String songtitle;

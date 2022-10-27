@@ -23,9 +23,6 @@ public class Playlist {
 	
 	private String playlistdescr;
 	
-	@OneToMany
-	private Integer songid;
-	
 	@JsonFormat(pattern = "dd-MM-yyyy")
 	private String playlistcreationdate;
 	
@@ -63,14 +60,6 @@ public class Playlist {
 		this.playlistdescr = playlistdescr;
 	}
 
-	public Integer getSongid() {
-		return songid;
-	}
-
-	public void setSongid(Integer songid) {
-		this.songid = songid;
-	}
-
 	public String getPlaylistcreationdate() {
 		return playlistcreationdate;
 	}
@@ -94,7 +83,6 @@ public class Playlist {
 		this.playlistid = playlistid;
 		this.playlisttitle = playlisttitle;
 		this.playlistdescr = playlistdescr;
-		this.songid = songid;
 		this.playlistcreationdate = playlistcreationdate;
 		this.playlistimg = playlistimg;
 	}
@@ -106,7 +94,7 @@ public class Playlist {
 	@Override
 	public String toString() {
 		return "Playlist [playlistnum=" + playlistnum + ", playlistid=" + playlistid + ", playlisttitle="
-				+ playlisttitle + ", playlistdescr=" + playlistdescr + ", songid=" + songid + ", playlistcreationdate="
+				+ playlisttitle + ", playlistdescr=" + playlistdescr + ", playlistcreationdate="
 				+ playlistcreationdate + ", playlistimg=" + playlistimg + "]";
 	}
 	
