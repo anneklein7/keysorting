@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.example.persistence.domain.Song;
 
 @Repository
-public interface SongRepository extends JpaRepository<Song, String> {
+public interface SongsRepository extends JpaRepository<Song, String> {
 
 	@Query("Find s from Song s where s.songid=?1")
 	Optional<Song> songById(String songid);
@@ -18,7 +18,7 @@ public interface SongRepository extends JpaRepository<Song, String> {
 	Optional<Song> songByTitle(String songtitle);
 	
 	@Query("Find s from Song s where s.songkey=?1")
-	Optional<Song> songByKey(String songkey);
+	Optional<Song> readSongByKey(String songkey);
 	
 	@Query("Find s from Song s where s.songartist=?1")
 	Optional<Song> songByArtist(String songartist);

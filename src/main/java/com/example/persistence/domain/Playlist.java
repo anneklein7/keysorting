@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -13,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Playlist {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer playlistnum;
+	private Long playlistnum;
 	
 	@Id
 	@NotNull
@@ -23,7 +22,6 @@ public class Playlist {
 	
 	private String playlistdescr;
 	
-	@OneToMany
 	private Integer songid;
 	
 	@JsonFormat(pattern = "dd-MM-yyyy")
@@ -31,11 +29,11 @@ public class Playlist {
 	
 	private String playlistimg;
 
-	public Integer getPlaylistnum() {
+	public Long getPlaylistnum() {
 		return playlistnum;
 	}
 
-	public void setPlaylistnum(Integer playlistnum) {
+	public void setPlaylistnum(Long playlistnum) {
 		this.playlistnum = playlistnum;
 	}
 
@@ -87,7 +85,7 @@ public class Playlist {
 		this.playlistimg = playlistimg;
 	}
 
-	public Playlist(Integer playlistnum, @NotNull String playlistid, String playlisttitle, String playlistdescr,
+	public Playlist(Long playlistnum, @NotNull String playlistid, String playlisttitle, String playlistdescr,
 			Integer songid, String playlistcreationdate, String playlistimg) {
 		super();
 		this.playlistnum = playlistnum;

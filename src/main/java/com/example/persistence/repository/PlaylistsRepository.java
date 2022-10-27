@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.example.persistence.domain.Playlist;
 
 @Repository
-public interface PlaylistRepository extends JpaRepository<Playlist, String> {
+public interface PlaylistsRepository extends JpaRepository<Playlist, String> {
 
 	@Query("Find p from Playlist p where p.playlistid=?1")
 	Optional<Playlist> playlistById(String playlistid);
