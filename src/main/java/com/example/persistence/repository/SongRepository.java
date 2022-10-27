@@ -12,7 +12,7 @@ import com.example.persistence.domain.Song;
 public interface SongRepository extends JpaRepository<Song, String> {
 
 	@Query("Find s from Song s where s.songid=?1")
-	Optional<Song> songById(Integer songid);
+	Optional<Song> songById(String songid);
 	
 	@Query("Find s from Song s where s.songtitle=?1")
 	Optional<Song> songByTitle(String songtitle);
