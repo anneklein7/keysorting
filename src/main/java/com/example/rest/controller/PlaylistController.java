@@ -40,11 +40,6 @@ public class PlaylistController {
 		return service.readByPlaylistTitle(title);
 	}
 	
-	@GetMapping("/playlistByTitle")
-	public SongDTO readPlaylistSongsByTitle(@PathParam("title") String title) {
-		return service.readPlaylistSongsByTitle(title);
-	}
-	
 	@PutMapping("/updatePlaylist/{id}")
 	public PlaylistDTO updatePlaylist(@PathVariable String id, @RequestBody Playlist playlist) {
 		return service.updatePlaylist(id, playlist);

@@ -10,7 +10,6 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
@@ -20,13 +19,8 @@ public class Song {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@ManyToOne(targetEntity = Playlist.class)
-	@JsonBackReference
+	@ManyToOne
 	private Playlist playlist;
-	
-	@Column
-	@NotNull
-	private String playlistid;
 	
 	@Column
 	private String songtitle;
@@ -66,14 +60,6 @@ public class Song {
 
 	public void setPlaylist(Playlist playlist) {
 		this.playlist = playlist;
-	}
-
-	public String getPlaylistid() {
-		return playlistid;
-	}
-
-	public void setPlaylistid(String playlistid) {
-		this.playlistid = playlistid;
 	}
 
 	public String getSongtitle() {
@@ -138,7 +124,6 @@ public class Song {
 		super();
 		this.id = id;
 		this.playlist = playlist;
-		this.playlistid = playlistid;
 		this.songtitle = songtitle;
 		this.songartist = songartist;
 		this.songlength = songlength;
@@ -154,7 +139,7 @@ public class Song {
 
 	@Override
 	public String toString() {
-		return "Song [id=" + id + ", playlist=" + playlist + ", playlistid=" + playlistid + ", songtitle=" + songtitle
+		return "Song [id=" + id + ", playlist=" + playlist + ", songtitle=" + songtitle
 				+ ", songartist=" + songartist + ", songlength=" + songlength + ", songkey=" + songkey
 				+ ", songalbumtitle=" + songalbumtitle + ", songalbumimg=" + songalbumimg + ", songreleasedate="
 				+ songreleasedate + "]";

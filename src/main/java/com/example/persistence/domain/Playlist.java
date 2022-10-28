@@ -22,27 +22,9 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Entity
 public class Playlist {
 
-<<<<<<< HEAD
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
-=======
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer playlistnum;
-	
-	@Id
-	@NotNull
-	private String playlistid;
-	
-	private String playlisttitle;
-	
-	private String playlistdescr;
-	
-	@JsonFormat(pattern = "dd-MM-yyyy")
-	private String playlistcreationdate;
-	
-	private String playlistimg;
->>>>>>> eb7576cce0deb016c015a291e76915669e362a11
 
 		@Column
 		@NotNull
@@ -66,7 +48,7 @@ public class Playlist {
 		@OnDelete(action = OnDeleteAction.CASCADE)
 		@JsonManagedReference
 		@JsonIgnore
-		private List<Song> songs = new ArrayList<>();
+		private List<Song> song = new ArrayList<>();
 
 		public Long getId() {
 			return id;
@@ -84,7 +66,6 @@ public class Playlist {
 			this.playlistid = playlistid;
 		}
 
-<<<<<<< HEAD
 		public String getPlaylisttitle() {
 			return playlisttitle;
 		}
@@ -96,11 +77,6 @@ public class Playlist {
 		public String getPlaylistdescr() {
 			return playlistdescr;
 		}
-=======
-	public String getPlaylistcreationdate() {
-		return playlistcreationdate;
-	}
->>>>>>> eb7576cce0deb016c015a291e76915669e362a11
 
 		public void setPlaylistdescr(String playlistdescr) {
 			this.playlistdescr = playlistdescr;
@@ -114,34 +90,20 @@ public class Playlist {
 			this.playlistcreationdate = playlistcreationdate;
 		}
 
-<<<<<<< HEAD
 		public String getPlaylistimg() {
 			return playlistimg;
 		}
-=======
-	public Playlist(Integer playlistnum, @NotNull String playlistid, String playlisttitle, String playlistdescr,
-			Integer songid, String playlistcreationdate, String playlistimg) {
-		super();
-		this.playlistnum = playlistnum;
-		this.playlistid = playlistid;
-		this.playlisttitle = playlisttitle;
-		this.playlistdescr = playlistdescr;
-		this.playlistcreationdate = playlistcreationdate;
-		this.playlistimg = playlistimg;
-	}
->>>>>>> eb7576cce0deb016c015a291e76915669e362a11
 
 		public void setPlaylistimg(String playlistimg) {
 			this.playlistimg = playlistimg;
 		}
 
-<<<<<<< HEAD
 		public List<Song> getSongs() {
-			return songs;
+			return song;
 		}
 
 		public void setSongs(List<Song> songs) {
-			this.songs = songs;
+			this.song = songs;
 		}
 
 		public Playlist(Long id, @NotNull String playlistid, @NotNull String playlisttitle, String playlistdescr,
@@ -153,7 +115,7 @@ public class Playlist {
 			this.playlistdescr = playlistdescr;
 			this.playlistcreationdate = playlistcreationdate;
 			this.playlistimg = playlistimg;
-			this.songs = songs;
+			this.song = songs;
 		}
 
 		public Playlist() {
@@ -164,20 +126,10 @@ public class Playlist {
 		public String toString() {
 			return "Playlist [id=" + id + ", playlistid=" + playlistid + ", playlisttitle=" + playlisttitle
 					+ ", playlistdescr=" + playlistdescr + ", playlistcreationdate=" + playlistcreationdate
-					+ ", playlistimg=" + playlistimg + ", songs=" + songs + "]";
+					+ ", playlistimg=" + playlistimg + ", songs=" + song + "]";
 		}
 		
-		
-		
-=======
-	@Override
-	public String toString() {
-		return "Playlist [playlistnum=" + playlistnum + ", playlistid=" + playlistid + ", playlisttitle="
-				+ playlisttitle + ", playlistdescr=" + playlistdescr + ", playlistcreationdate="
-				+ playlistcreationdate + ", playlistimg=" + playlistimg + "]";
-	}
-	
->>>>>>> eb7576cce0deb016c015a291e76915669e362a11
+
 }
 	
 
