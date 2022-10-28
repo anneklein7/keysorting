@@ -1,61 +1,71 @@
 package com.example.persistence.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Song {
 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer songnum;
-	
 	@Id
-	@NotNull
-	private Integer songid;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	
+	@ManyToOne(targetEntity = Playlist.class)
+	@JsonBackReference
+	private Playlist playlist;
+	
+	@Column
 	@NotNull
-	@OneToMany
 	private String playlistid;
 	
+	@Column
 	private String songtitle;
 	
+	@Column
 	private String songartist;
 	
+	@Column
 	private float songlength;
 	
+	@Column
 	@Min(1)
 	@Max(5)
 	private String songkey;
 	
+	@Column
 	private String songalbumtitle;
 	
+	@Column
 	private String songalbumimg;
 	
+	@Column
 	@JsonFormat(pattern = "dd-MM-yyyy")
 	private String songreleasedate;
 
-	public Integer getSongnum() {
-		return songnum;
+	public Long getId() {
+		return id;
 	}
 
-	public void setSongnum(Integer songnum) {
-		this.songnum = songnum;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	public Integer getSongid() {
-		return songid;
+	public Playlist getPlaylist() {
+		return playlist;
 	}
 
-	public void setSongid(Integer songid) {
-		this.songid = songid;
+	public void setPlaylist(Playlist playlist) {
+		this.playlist = playlist;
 	}
 
 	public String getPlaylistid() {
@@ -122,16 +132,12 @@ public class Song {
 		this.songreleasedate = songreleasedate;
 	}
 
-	public Song() {
+	public Song(Long id, Playlist playlist, @NotNull String playlistid, String songtitle, String songartist,
+			float songlength, @Min(1) @Max(5) String songkey, String songalbumtitle, String songalbumimg,
+			String songreleasedate) {
 		super();
-	}
-
-	public Song(Integer songnum, @NotNull Integer songid, @NotNull String playlistid, String songtitle,
-			String songartist, float songlength, @Min(1) @Max(5) String songkey, String songalbumtitle,
-			String songalbumimg, String songreleasedate) {
-		super();
-		this.songnum = songnum;
-		this.songid = songid;
+		this.id = id;
+		this.playlist = playlist;
 		this.playlistid = playlistid;
 		this.songtitle = songtitle;
 		this.songartist = songartist;
@@ -142,13 +148,17 @@ public class Song {
 		this.songreleasedate = songreleasedate;
 	}
 
+	public Song() {
+		super();
+	}
+
 	@Override
 	public String toString() {
-		return "Song [songnum=" + songnum + ", songid=" + songid + ", playlistid=" + playlistid + ", songtitle="
-				+ songtitle + ", songartist=" + songartist + ", songlength=" + songlength + ", songkey=" + songkey
+		return "Song [id=" + id + ", playlist=" + playlist + ", playlistid=" + playlistid + ", songtitle=" + songtitle
+				+ ", songartist=" + songartist + ", songlength=" + songlength + ", songkey=" + songkey
 				+ ", songalbumtitle=" + songalbumtitle + ", songalbumimg=" + songalbumimg + ", songreleasedate="
 				+ songreleasedate + "]";
 	}
 	
-
+	
 }

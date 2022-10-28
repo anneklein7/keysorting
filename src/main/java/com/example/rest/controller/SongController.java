@@ -34,21 +34,21 @@ public class SongController {
 	
 	@GetMapping("/songById")
 	public SongDTO readSongById(@PathParam("id") String id) {
-		return service.readBySongId(id);
+		return service.readById(id);
 	}
 	
 	@GetMapping("/songByKey")
 	public SongDTO readSongByKey(@PathParam("key") String key) {
-		return service.readBySongKey(key);
+		return service.readByKey(key);
 	}
 	
 	@GetMapping("/songByTitle")
 	public SongDTO readSongByTitle(@PathParam("title") String title) {
-		return service.readBySongTitle(title);
+		return service.readByTitle(title);
 	}
 	
 	@GetMapping("/songByArtist")
-	public SongDTO readSongByArtist(@PathParam("artist") String artist) {
+	public SongDTO readByArtist(@PathParam("artist") String artist) {
 		return service.readByArtist(artist);
 	}
 	
