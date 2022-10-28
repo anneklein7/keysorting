@@ -1,5 +1,7 @@
 # Tonic | A music sorting API (Version 1)
 
+> *Perhaps music will never be innocent again. Perhaps music is an agent of surveillance. Vaporwave longs for a time when music was more important than technology; simultaneously, it mocks and reaches towards its raw material –songs from the past– certain that we'll never be capable of such sincerity again.* (from "Pink Light: Notes on Six Vaporwave Albums", in Roisin Kiberd's *The Disconnect*).
+
 ![fath-3NgcTH0CFJg-unsplash.jpeg](https://res.craft.do/user/full/a49dbab3-70d3-4ed6-6520-6324300d3ee7/A8EE52CB-946B-400C-BA80-4287AE66B9DB_2/ZM2piYSZnRJK7edVvy8diHnJ7wJuYo7LkjLkyRIdyR4z/fath-3NgcTH0CFJg-unsplash.jpeg)
 
 ### Purpose of the project
@@ -73,9 +75,9 @@ All the issues were grouped under the epic named Bootcamp MVP, and I synced them
 
 ![Screenshot 2022-10-28 at 18.00.12.jpeg](https://res.craft.do/user/full/a49dbab3-70d3-4ed6-6520-6324300d3ee7/EA271AF2-D03A-43A4-86D5-448BEB64A334_2/cHQo4xOOHm11sFsBxckvEs3znP5usP9zKkI9lDVRlAsz/Screenshot%202022-10-28%20at%2018.00.12.jpeg)
 
-![Screenshot 2022-10-28 at 18.01.00.jpeg](https://res.craft.do/user/full/a49dbab3-70d3-4ed6-6520-6324300d3ee7/7F096DE4-1687-466F-A679-A1A7DBA8FD9A_2/fAwdtq0Tw5qfZ0O4EGvbsF00p0ovHUmfMBj5UxwwgRsz/Screenshot%202022-10-28%20at%2018.01.00.jpeg)
+![jira issue.jpeg](https://res.craft.do/user/full/a49dbab3-70d3-4ed6-6520-6324300d3ee7/doc/A2A4B267-75E3-43B4-A3D5-1D2796962086/FBA8DBD0-AA4E-416B-AF14-75DE4C0E0850_2/wkyNLnZyK94azmcyjIgGyxexjASc43LbJMGqyOLv6Ocz/jira%20issue.jpeg)
 
-I also used Confluence briefly to plan my project documentation (risk assessment, controller method checklist), since the templates in there are very much geared towards software development and project management with Jira. This was very useful, but in the end I discovered a writing program called Craft that integrated well with markdown, and so I transferred the documents to Craft and have worked with it for most of the project.
+I also used Confluence briefly to plan my project documentation (risk assessment which can be found on the main branch of the repository, plus a controller method checklist), since the templates in there are very much geared towards software development and project management with Jira. This was very useful, but in the end I discovered a writing program called Craft that integrated well with markdown, and so I transferred the documents to Craft and have worked with it for most of the project.
 
 ---
 
@@ -108,6 +110,12 @@ I also used Confluence briefly to plan my project documentation (risk assessment
 ### Project structure on Spring Tool Suite
 
 ![Screenshot 2022-10-28 at 17.53.19.jpeg](https://res.craft.do/user/full/a49dbab3-70d3-4ed6-6520-6324300d3ee7/doc/A2A4B267-75E3-43B4-A3D5-1D2796962086/D938EAAD-C96B-425C-B0AE-843D0E0CF0F4_2/9qAYF0P8Qpychfr8DbuLBWxQQk8gzSGuk2AnPGPLzWIz/Screenshot%202022-10-28%20at%2017.53.19.jpeg)
+
+### Entity Relationship Diagrams (MySQL, LucidChart initial experiment)
+
+![MySQL ERD.jpeg](https://res.craft.do/user/full/a49dbab3-70d3-4ed6-6520-6324300d3ee7/41A5A8F9-9CC1-43F2-9CE2-EE5ACBC43C5C_2/FiY1zWfysNN63Hzb1dYdMpyH7A53WT8ZyQyTTW9a7nkz/MySQL%20ERD.jpeg)
+
+![LucidChartERD.jpeg](https://res.craft.do/user/full/a49dbab3-70d3-4ed6-6520-6324300d3ee7/doc/A2A4B267-75E3-43B4-A3D5-1D2796962086/A31C7870-5FD0-4D63-8EC3-74F7677424E2_2/oyNQ0lNkvKhHyuowFQesBwv0yYGrWP8ST22zZIOZScIz/LucidChartERD.jpeg)
 
 ### Pending requirements to work on in order of priority
 
