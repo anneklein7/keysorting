@@ -22,9 +22,27 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Entity
 public class Playlist {
 
+<<<<<<< HEAD
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
+=======
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer playlistnum;
+	
+	@Id
+	@NotNull
+	private String playlistid;
+	
+	private String playlisttitle;
+	
+	private String playlistdescr;
+	
+	@JsonFormat(pattern = "dd-MM-yyyy")
+	private String playlistcreationdate;
+	
+	private String playlistimg;
+>>>>>>> eb7576cce0deb016c015a291e76915669e362a11
 
 		@Column
 		@NotNull
@@ -66,6 +84,7 @@ public class Playlist {
 			this.playlistid = playlistid;
 		}
 
+<<<<<<< HEAD
 		public String getPlaylisttitle() {
 			return playlisttitle;
 		}
@@ -77,6 +96,11 @@ public class Playlist {
 		public String getPlaylistdescr() {
 			return playlistdescr;
 		}
+=======
+	public String getPlaylistcreationdate() {
+		return playlistcreationdate;
+	}
+>>>>>>> eb7576cce0deb016c015a291e76915669e362a11
 
 		public void setPlaylistdescr(String playlistdescr) {
 			this.playlistdescr = playlistdescr;
@@ -90,14 +114,28 @@ public class Playlist {
 			this.playlistcreationdate = playlistcreationdate;
 		}
 
+<<<<<<< HEAD
 		public String getPlaylistimg() {
 			return playlistimg;
 		}
+=======
+	public Playlist(Integer playlistnum, @NotNull String playlistid, String playlisttitle, String playlistdescr,
+			Integer songid, String playlistcreationdate, String playlistimg) {
+		super();
+		this.playlistnum = playlistnum;
+		this.playlistid = playlistid;
+		this.playlisttitle = playlisttitle;
+		this.playlistdescr = playlistdescr;
+		this.playlistcreationdate = playlistcreationdate;
+		this.playlistimg = playlistimg;
+	}
+>>>>>>> eb7576cce0deb016c015a291e76915669e362a11
 
 		public void setPlaylistimg(String playlistimg) {
 			this.playlistimg = playlistimg;
 		}
 
+<<<<<<< HEAD
 		public List<Song> getSongs() {
 			return songs;
 		}
@@ -131,6 +169,15 @@ public class Playlist {
 		
 		
 		
+=======
+	@Override
+	public String toString() {
+		return "Playlist [playlistnum=" + playlistnum + ", playlistid=" + playlistid + ", playlisttitle="
+				+ playlisttitle + ", playlistdescr=" + playlistdescr + ", playlistcreationdate="
+				+ playlistcreationdate + ", playlistimg=" + playlistimg + "]";
+	}
+	
+>>>>>>> eb7576cce0deb016c015a291e76915669e362a11
 }
 	
 
