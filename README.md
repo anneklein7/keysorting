@@ -1,36 +1,36 @@
 # Tonic | A music sorting API (Version 1)
 
-### Purpose of the project
+### 🎶 Purpose of the project
 
 Tonic is a Java REST API that will fetch records from a Spotify user's playlists and organise them by key, among other possible queries. Eventually, the app will implement the ability to detect a song's key with AI using the tools from the [Essentia open-source library](https://essentia.upf.edu) developed by the Pompeu Fabra University Barcelona's Music Technology Group.
 
 Its name comes from the music theory term for the first note in a harmonic sequence.
 
-> ### Technology Stack
+ ### 💾 Technology Stack
 
-- > Spring Tool Suite 4 (development)
-- > MySQL Workbench (data persistence)
-- > Postman (checking request functionality)
-- > GitHub (code repository)
-- > Spotify API (obtaining JSON information about playlists and songs in real time)
-- > Jira (project management)
-- > Confluence (documentation templates)
-- > LucidChart (ERD design before reproducing it on MySQL)
-- > Craft (writing the documentation and formatting it with markdown)
+- Spring Tool Suite 4 (development)
+- MySQL Workbench (data persistence)
+- Postman (checking request functionality)
+- GitHub (code repository)
+- Spotify API (obtaining JSON information about playlists and songs in real time)
+- Jira (project management)
+- Confluence (documentation templates)
+- LucidChart (ERD design before reproducing it on MySQL)
+- Craft (writing the documentation and formatting it with markdown)
 
-> ### Functionality of the project
+ ### 🔎 Functionality of the project
 
-- > Getting information about a playlist from a MySQL database
-- > Adding information about a playlist to the MySQL database
-- > Deleting and updating information about a playlist in the database
-- > Getting information about a song from a MySQL database
-- > Adding information about a song to the MySQL database
-- > Deleting and updating information about songs in the database
-- > Querying the playlists and songs databases by artist, title, song key, and Spotify id
+- Getting information about a playlist from a MySQL database
+- Adding information about a playlist to the MySQL database
+- Deleting and updating information about a playlist in the database
+- Getting information about a song from a MySQL database
+- Adding information about a song to the MySQL database
+- Deleting and updating information about songs in the database
+- Querying the playlists and songs databases by artist, title, song key, and Spotify id
 
 ---
 
-### How I expected the challenge to go, the process, and what I learnt.
+### 📖 How I expected the challenge to go, the process, and what I learnt.
 
 I did not have many expectations to begin with, mostly because I didn't really know what an API was in the first place! It turned out to be something easier to understand than I had imagined. I thought we were supposed to develop a full application, and so I felt quite stressed since we kept leaving the project for the last few days. But when it came to finally do it, I slowly understood how all the little pieces of the puzzle fit together—how everything we had learnt over the weeks of Java lessons could be applied to make an API.
 
@@ -71,7 +71,7 @@ I also used Confluence briefly to plan my project documentation (risk assessment
 
 ---
 
-### How to use this API
+### 📙 How to use this API
 
 - First, you have to execute the .jar file and connect to your local MySQL database.
 - This API is meant for use through Postman. It uses port 8080 on your local server, so the main link you will have to use in your Postman requests will be localhost:8080/{custom request you want to execute}
