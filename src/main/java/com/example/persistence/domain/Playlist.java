@@ -17,7 +17,6 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Playlist {
@@ -46,9 +45,8 @@ public class Playlist {
 
 		@OneToMany(mappedBy = "playlist", fetch = FetchType.EAGER)
 		@OnDelete(action = OnDeleteAction.CASCADE)
-		@JsonManagedReference
 		@JsonIgnore
-		private List<Song> song = new ArrayList<>();
+		private List<Song> songs = new ArrayList<>();
 
 		public Long getId() {
 			return id;
@@ -99,11 +97,11 @@ public class Playlist {
 		}
 
 		public List<Song> getSongs() {
-			return song;
+			return songs;
 		}
 
 		public void setSongs(List<Song> songs) {
-			this.song = songs;
+			this.songs = songs;
 		}
 
 		public Playlist(Long id, @NotNull String playlistid, @NotNull String playlisttitle, String playlistdescr,
@@ -115,7 +113,7 @@ public class Playlist {
 			this.playlistdescr = playlistdescr;
 			this.playlistcreationdate = playlistcreationdate;
 			this.playlistimg = playlistimg;
-			this.song = songs;
+			this.songs = songs;
 		}
 
 		public Playlist() {
@@ -126,7 +124,7 @@ public class Playlist {
 		public String toString() {
 			return "Playlist [id=" + id + ", playlistid=" + playlistid + ", playlisttitle=" + playlisttitle
 					+ ", playlistdescr=" + playlistdescr + ", playlistcreationdate=" + playlistcreationdate
-					+ ", playlistimg=" + playlistimg + ", songs=" + song + "]";
+					+ ", playlistimg=" + playlistimg + ", songs=" + songs + "]";
 		}
 		
 

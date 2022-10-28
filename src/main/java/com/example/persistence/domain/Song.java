@@ -10,6 +10,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
@@ -19,7 +20,8 @@ public class Song {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@ManyToOne
+	@ManyToOne(targetEntity = Playlist.class)
+	@JsonBackReference
 	private Playlist playlist;
 	
 	@Column
@@ -136,7 +138,7 @@ public class Song {
 	public Song() {
 		super();
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Song [id=" + id + ", playlist=" + playlist + ", songtitle=" + songtitle

@@ -11,10 +11,10 @@ import com.example.persistence.domain.Playlist;
 @Repository
 public interface PlaylistRepository extends JpaRepository<Playlist, String> {
 
-	@Query("Find p from Playlist p where p.playlistid=?1")
-	Optional<Playlist> playlistById(String playlistid);
+	@Query("Select p from Playlist p where p.id=?1")
+	Optional<Playlist> playlistById(String id);
 
-	@Query("Find p from Playlist p where p.playlisttitle=?1")
+	@Query("Select p from Playlist p where p.playlisttitle=?1")
 	Optional<Playlist> playlistByTitle(String playlisttitle);
 	
 }
