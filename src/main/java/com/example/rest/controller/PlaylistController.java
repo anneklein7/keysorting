@@ -20,7 +20,7 @@ public class PlaylistController {
 	@Autowired
 	private PlaylistService service;
 
-	@PostMapping("/addPlaylist/{id}")
+	@PostMapping("/addPlaylist")
 	public PlaylistDTO addPlaylist(@RequestBody Playlist playlist) {
 		return service.addPlaylist(playlist);
 	}
@@ -30,7 +30,7 @@ public class PlaylistController {
 		return service.getAllPlaylists();
 	}
 	
-	@GetMapping("/playlistById")
+	@GetMapping("/playlistById/{id}")
 	public PlaylistDTO readPlaylistById(@PathParam("id") String id) {
 		return service.readPlaylistId(id);
 	}
