@@ -8,27 +8,27 @@ Tonic is a Java REST API that will fetch records from a Spotify user's playlists
 
 Its name comes from the music theory term for the first note in a harmonic sequence.
 
-> ### Technology Stack
+### Technology Stack
 
-- > **Spring Tool Suite 4** (development)
-- > **MySQL Workbench** (data persistence)
-- > **Postman** (checking request functionality)
-- > **GitHub** (code repository)
-- > **Spotify API** (obtaining JSON information about playlists and songs in real time)
-- > **Jira** (project management)
-- > **Confluence** (documentation templates)
-- > **LucidChart** (ERD design before reproducing it on MySQL)
-- > **Craft** (writing the documentation and formatting it with markdown)
+- **Spring Tool Suite 4** (development)
+- **MySQL Workbench** (data persistence)
+- **Postman** (checking request functionality)
+- **GitHub** (code repository)
+- **Spotify API** (obtaining JSON information about playlists and songs in real time)
+- **Jira** (project management)
+- **Confluence** (documentation templates)
+- **LucidChart** (ERD design before reproducing it on MySQL)
+- **Craft** (writing the documentation and formatting it with markdown)
 
-> ### Functionality of the project
+### Functionality of the project
 
-- > Getting information about a playlist from a MySQL database
-- > Adding information about a playlist to the MySQL database
-- > Deleting and updating information about a playlist in the database
-- > Getting information about a song from a MySQL database
-- > Adding information about a song to the MySQL database
-- > Deleting and updating information about songs in the database
-- > Querying the playlists and songs databases by artist, title, song key, and Spotify id
+- Getting information about a playlist from a MySQL database
+- Adding information about a playlist to the MySQL database
+- Deleting and updating information about a playlist in the database
+- Getting information about a song from a MySQL database
+- Adding information about a song to the MySQL database
+- Deleting and updating information about songs in the database
+- Querying the playlists and songs databases by artist, title, song key, and Spotify id
 
 ---
 
