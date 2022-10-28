@@ -26,7 +26,7 @@ The development of the ratings is based on a) the likelihood of an event occurri
 
 ## ⚠️ Assessment for the Tonic API (ver. 1)
 
-| **SEVERITY ➡️<br><br>LIKELIHOOD ⬇️**         | **ACCEPTABLE**   Little/no effect | **TOLERABLE**  Effects present but not critical | **UNDESIRABLE**   Serious impact              | **INTOLERABLE**   Could result in disaster                      |
+| **SEVERITY ➡️<br><br>LIKELIHOOD ⬇️**         | **ACCEPTABLE**  / Little/no effect | **TOLERABLE** / Effects present but not critical | **UNDESIRABLE**   Serious impact              | **INTOLERABLE**   / Could result in disaster                      |
 | -------------------------------------------- | --------------------------------- | ----------------------------------------------- | --------------------------------------------- | --------------------------------------------------------------- |
 | **IMPROBABLE**   _Risk is unlikely to occur_ | No acceptance testing             | Lack of zero-trust policy                       |                                               | Incorrectly implemented authentication                          |
 | **POSSIBLE**   _Risk will likely occur_      | Insufficient unit testing         | Not enough constraints on data                  | Injections, insufficient integration tests    | Lack of data encryption (missing TLS)                           |
